@@ -1,0 +1,60 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Y Axis",
+            "description": "Y axis data values",
+            "name": "y_axis",
+            "kind": "GroupingOrMeasure"
+        },
+        {
+            "displayName": "X Axis",
+            "description": "X axis data values",
+            "name": "x_axis",
+            "kind": "GroupingOrMeasure"
+        },
+        {
+            "displayName": "Tooltips",
+            "description": "Fields to be used as mouseover tooltips",
+            "kind": "Grouping",
+            "name": "tooltips"
+        }
+    ],
+
+    "objects": {
+        "dataPoint": {
+            "properties": {
+                "upperRight": {"type": {"fill": {"solid": {"color": true}}}},
+                "upperLeft": {"type": {"fill": {"solid": {"color": true}}}},
+                "lowerRight": {"type": {"fill": {"solid": {"color": true}}}},
+                "lowerLeft": {"type": {"fill": {"solid": {"color": true}}}}
+                }
+            },
+            "quadrants": {
+                "properties": {
+                    "upperLeftText": {"type": {"text": true}},
+                    "upperRightText": {"type": {"text": true}},
+                    "lowerLeftText": {"type": {"text": true}},
+                    "lowerRightText": {"type": {"text": true}},
+                    "fontSize": {"type": {"formatting": {"fontSize": true}}}
+                    }
+            }
+    },
+
+
+
+    "dataViewMappings": [{
+        "table": {
+            "rows": {
+                "select": [
+                    {"for": {"in": "y_axis"}},
+                    {"for": {"in": "x_axis"}},
+                    {"for": {"in": "tooltips"}}
+                ]
+            }
+        }
+    }],
+      
+
+
+    "privileges": []
+}

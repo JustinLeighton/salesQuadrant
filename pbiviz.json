@@ -1,0 +1,23 @@
+{
+    "visual":{
+        "name":"salesQuadrants",
+        "displayName":"salesQuadrants",
+        "guid":"salesQuadrants025B945D8E92490DB5754EB89BDA2DC3",
+        "visualClassName":"Visual",
+        "version":"1.0.0",
+        "description":"Sales Quadrant visual via Plotly",
+        "supportUrl":"github.com/JustinLeighton",
+        "gitHubUrl":"github.com/JustinLeighton"
+    },
+    "apiVersion":"5.1.0",
+    "author":{
+        "name":"Justin Leighton",
+        "email":"Justinthomas.leighton@gmail.com"
+    },
+    "assets":{"icon":"assets/icon.png"},
+    "externalJS":null,
+    "style":"style/visual.less",
+    "capabilities":"capabilities.json",
+    "dependencies":null,
+    "stringResources":[]
+}
