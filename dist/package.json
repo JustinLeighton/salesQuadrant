@@ -8,7 +8,7 @@
             "file": "resources/salesQuadrants025B945D8E92490DB5754EB89BDA2DC3.pbiviz.json"
         }
     ],
-    "visual": {"name":"salesQuadrants","displayName":"salesQuadrants","guid":"salesQuadrants025B945D8E92490DB5754EB89BDA2DC3","visualClassName":"Visual","version":"1.0.0","description":"Sales Quadrant visual via Plotly","supportUrl":"github.com/JustinLeighton","gitHubUrl":"github.com/JustinLeighton"},
+    "visual": {"name":"salesQuadrants","displayName":"salesQuadrants","guid":"salesQuadrants025B945D8E92490DB5754EB89BDA2DC3","visualClassName":"Visual","version":"1.0.0","description":"Sales Quadrant visual via Plotly","supportUrl":"https://community.powerbi.com","gitHubUrl":"https://github.com/JustinLeighton/salesQuadrant"},
     "metadata": {
         "pbivizjson": {
             "resourceId": "rId0"

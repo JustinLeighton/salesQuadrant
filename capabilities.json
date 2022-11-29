@@ -40,6 +40,8 @@
             }
     },
 
+    "sorting":{"custom":{}},
+
 
 
     "dataViewMappings": [{

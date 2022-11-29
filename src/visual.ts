@@ -117,7 +117,7 @@ export class Visual implements IVisual {
             }
         });
 
-        // Log element indices
+        // Log element indices for cross-filtering
         let records = tableDataView.rows;
         const map2 = data_t.map(function(element, index){
             let selectionId: ISelectionId = this.host.createSelectionIdBuilder()
@@ -132,7 +132,7 @@ export class Visual implements IVisual {
         var data = [{
         y: data_y,
         x: data_x,
-        mode: 'markers',
+        mode: 'lines+markers',
         type: 'scatter',
         text: data_t,
         marker: {
@@ -144,6 +144,11 @@ export class Visual implements IVisual {
                 width: 1
               }
         },
+        line: {
+            shape: "spline",
+            color: "#888888",
+            width: 1
+        },
         hovertemplate: '<b>%{text}</b>' + 
         '<br><i>Actual</i>: %{y:.0%}' +
         '<br><i>Effort</i>: %{x:.0%}' +
@@ -154,9 +159,9 @@ export class Visual implements IVisual {
         clickmode: 'event+select',
         dragmode: 'select',
         margin: {
-            l: 25,
+            l: 50,
             r: 25,
-            b: 25,
+            b: 50,
             t: 25,
             pad: 4
         },
@@ -223,35 +228,18 @@ export class Visual implements IVisual {
         Plotly.newPlot(gd, data, layout);
 
         // Event handling
-        $('div').on('plotly_selected', function(eventData){
-            console.log('Selected!');
-            console.log('Event Data:',eventData);
-            console.log('JQuery attributes:',$(eventData.target).attr);
-            console.log('JQuery value:',$(eventData.target).val());
-
-            console.log('getElementById selectedpoints', document.getElementById('w.Event'))
-            console.log('querySelectorAll selectedpoints', document.querySelectorAll('w.Event'))
-
-            //console.log(eventData.target.data[0].selectedpoints[0])
-            
-            // target.data[0].selectedpoints
-
-            //var sortOrder = eventData.target.getAttribute("data-sortorder");
-
-            //console.log('Event info', eventData);
-            //console.log('Dataset:', eventData.currentTarget);
-            //console.log('Dataset:', eventData.target.dataset);
-            //console.log('Attributes:', eventData.target.attributes);
-            
-            //for(var i=0; i < data[0].points.length; i++){
-            //    console.log(data[0].points[i].pointNumber)
-            //}
-            
-            var d = document.querySelectorAll("g.cartesianlayer > g > g.plot > g > g > g.points > path");
-            for(var i=0; i < d.length; i++){
-                console.log(d[i]);
-            };
-        });
+        //$('div').on('plotly_selected', function(eventData){
+        //    console.log('Selected!');
+        //    console.log('Event Data:',eventData);
+        //    console.log('JQuery attributes:',$(eventData.target).attr);
+        //    console.log('JQuery value:',$(eventData.target).val());
+        //    console.log('getElementById selectedpoints', document.getElementById('w.Event'))
+        //    console.log('querySelectorAll selectedpoints', document.querySelectorAll('w.Event'))
+        //    var d = document.querySelectorAll("g.cartesianlayer > g > g.plot > g > g > g.points > path");
+        //    for(var i=0; i < d.length; i++){
+        //        console.log(d[i]);
+        //    };
+        //});
 
         // #sandbox-host > div > div > svg:nth-child(1) > g.cartesianlayer > g > g.plot > g > g > g.points > path:nth-child(1)
         // #sandbox-host > div > div > svg:nth-child(1) > g.cartesianlayer > g > g.plot > g > g > g.points > path:nth-child(2)

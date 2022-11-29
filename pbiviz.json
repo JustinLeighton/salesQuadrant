@@ -6,8 +6,8 @@
         "visualClassName":"Visual",
         "version":"1.0.0",
         "description":"Sales Quadrant visual via Plotly",
-        "supportUrl":"github.com/JustinLeighton",
-        "gitHubUrl":"github.com/JustinLeighton"
+        "supportUrl":"https://community.powerbi.com",
+        "gitHubUrl":"https://github.com/JustinLeighton/salesQuadrant"
     },
     "apiVersion":"5.1.0",
     "author":{
